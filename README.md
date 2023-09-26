@@ -34,3 +34,13 @@ Se crea un index.html en la carpeta que asignamos previamente al contenedor y de
 Se repite lo empleado anteriormente y se crea un nuevo contenedor llamado **"asir_web1"** y se le asigna la el mismo directorio
 
     docker run -dit --name asir_web1 -p 8000:80 -v /home/asir2/Documentos/SRI/PRACTICA2/htdocs:/usr/local/apache2/htdocs/ httpd:2.4
+
+## 7. Utiliza Code para hacer un hola mundo en html
+
+Ya que se ha anexado la misma carpeta a este contenedor que al de **"asir_httpd"** ya hay un documento html que tiene escrito **"Hola Mundo"**, por ende al abrir el navedor nos mostrará dicho mensaje
+
+## 8. Crea otro contenedor 'asir_web2' con el mismo directorio y a otro puerto, por ejemplo 9080.
+
+Se repite el uso de comandos anteriores, en este caso para crear un contenedor con nombre **"asir_web2"** y con el puerto **9080**
+
+    docker run -dit --name asir_web2 -p 9080:80 -v /home/asir2/Documentos/SRI/PRACTICA2/htdocs:/usr/local/apache2/htdocs/ httpd:2.4
