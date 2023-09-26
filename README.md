@@ -29,6 +29,8 @@ Para elegir un directorio específico primero se coloca la ruta destino seguido 
 
 Se crea un index.html en la carpeta que asignamos previamente al contenedor y dentro de este html se escribe **"Hola mundo"**
 
+![ Puerto 8000 ](./imagenes/index.png)
+
 ## 6. Crea un contenedor 'asir_web1' que use este mismo directorio para 'htdocs' y el puerto 8000
 
 Se repite lo empleado anteriormente y se crea un nuevo contenedor llamado **"asir_web1"** y se le asigna la el mismo directorio
@@ -44,3 +46,17 @@ Ya que se ha anexado la misma carpeta a este contenedor que al de **"asir_httpd"
 Se repite el uso de comandos anteriores, en este caso para crear un contenedor con nombre **"asir_web2"** y con el puerto **9080**
 
     docker run -dit --name asir_web2 -p 9080:80 -v /home/asir2/Documentos/SRI/PRACTICA2/htdocs:/usr/local/apache2/htdocs/ httpd:2.4
+
+## 9. Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador: 
+
+**Puerto 8000**
+
+![ Puerto 8000 ](./imagenes/8000.png)
+
+**Puerto 9080**
+
+![ Puerto 8000 ](./imagenes/9080.png)
+
+## 10. Tienen que salir la misma página web
+
+Como se puede apreciar en las anteriores capturas, ambas muestran la misma página
